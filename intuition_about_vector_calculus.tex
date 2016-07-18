@@ -10,6 +10,10 @@
 % The content provided in this document is all taken from the website mathinsight.org and was solely summarized for private usage.
 
 \begin{document}
+	\maketitle
+	\tableofcontents
+	\let\thefootnote\relax\footnote{The content is mainly a summary of different websites(mainly http://mathinsight.org/). Sometimes sentences are cited one-to-one, but I have refrained from making citations and a bibliography because this paper's goal is not to be published but for private use.}
+	\newpage
 	\section{Line Integral of scalar-valued functions}
 	
 	\begin{itemize}
@@ -26,9 +30,10 @@
 	To calculate the total mass of the whole wire you just have to sum up all the masses of the segments: $\sum_{i}^{n} f(c(t_i))\cdot||c(t_i) - c(t_i -1)||$
 	
 	\item To turn this into an integral we define: $ \Delta t_i = t_i - t_{i-1}$. Now multiply and divide each term by $\Delta t_i$ and obtain the more complicated looking expression: \\
-	$\sum_{i}^{n} f(c(t_i))\cdot ||c(t_i)-c(t_{i-1})|| = \sum_{i}^{n}     ||\frac{c(t_{i-1} + \Delta t_i)-c(t_{i-1})}{\Delta t_i}|| \cdot \Delta t_{i-1}$
+	$\sum_{i}^{n} f(c(t_i))\cdot ||c(t_i)-c(t_{i-1})|| = \sum_{i}^{n}     ||\frac{c(t_{i-1} + \Delta t_i)-c(t_{i-1})}{\Delta t_i}|| \cdot \Delta t_{i-1}$\\
+	If you are confused by the counter just realize, that $c(t_{i-1} + \Delta t_i)-c(t_{i-1} = c(t_i) - c(t_i -1)$
 	
-	\item You realize, that the term in the expression $||.||$ is actually the definition of the derivate off $c(t)$. The counter is nothing else than a function c(t) applied to an interval and the denominator is that exact interval. So if you apply it to a two-dimensional function it's nothing else than $\frac{\Delta y}{Delta x}$ which defines the secant. 
+	\item You realize, that the term in the expression $||.||$ is actually the definition of the derivate off $c(t)$. The counter is nothing else than a function c(t) applied to an interval and the denominator is that exact interval. So if you apply it to a two-dimensional function it's nothing else than $\frac{\Delta y}{\Delta x}$ which defines the secant. 
 	
 	For comparison here is the definition of the definition of a Secant: \\
 	$\frac{f(x_0 + \Delta x) - f(x_0)}{\Delta x}$
@@ -41,11 +46,35 @@
 	\section{Introduction to a line integral of a vector field}
 	
 	\begin{itemize}
-	\item The only change to the chapter above is that now we want to integrate a vector valued curve function along a curve. They are usually represented by a vector field. \\ $\textit{A very easy interpretation is to imagine the amount of work that a foce field does on a particle as it moves along a curve.}$
+	\item The only change to the chapter above is that now we want to integrate a vector valued curve function along a curve. They are usually represented by a vector field.\\	\includegraphics[width=0.8\textwidth, height = 200px]{Field_Helix.png}
+	\\ $\textit{A very easy interpretation is to imagine the amount of work that a foce field does on a particle as it moves along a curve.}$
 	
-	\item 
+	\item Imagine you have a Bead that is fixed to move along a helix defined as $c(t)$. The green rectangle is a magnet inducing a magnetic field $F(x,y,z)$(illustrated by the green arrows). The line integral of a vector field can be thought of, as work on the bead. 
 	
-	\includegraphics[width=0.7\textwidth, height = 30px]{C:\Users\jerem\Pictures\Screenshots\Field_Helix}
+	\item When the bead changes its position along the function, the force exorted by the magnetic field, and thus also the work, changes.\\
+	
+	Work is defined as $F\cdot s$ (force in direction of movement). For example, when the movement is 90 degrees from the direction of the force, the magnetic field does no work at all. So how can we get the direction of the bead? \\
+	
+	We just use its direction given by the velocity $c'(t)$. We denote the unit vector in the direction of the movement as $T(t) = \frac{c'(t)||}{c'(t)||}$. If you think of it, this absolutely makes sense as the derivate of $c(t)$ defines teh tangent vector to the path. 
+	
+	\item  The component of force in direction of the movement is simply the force of the magnetic field at a specific point on the function $c(t)$ along the tangent of $c(t)$: $F(c(t))\cdot T(t)$.(for future reference we will use$F\cdot T)$ \\
+	
+	Per definition we know that if we take the product of force and distance we get work. So $F\cdot T$ actually denotes the work per unit length along the helix. \\
+	To get the total work we need to ake the line integral of this scalar-valued function. \\
+	Work = $\int_{C}^{} F\cdot T ds$ (where C is the path along the function$c(t)$)
+	
+	\item To derive a final formula we go back to the first chapter where we looked at scalar-valued line integrals and take the end-formula that we derived.\\
+	$\int_{C}^{} f ds = \int_{a}^{b} f(c(t))\cdot ||c'(t)|| dt$\\
+	If we replace f with our new equation for work $F\cdot T$ we get:\\
+	
+	$\int_{C}^{} F\cdot T ds = \int_{a}^{b}F(c(t))\cdot T(t)\cdot ||c'(t)|| dt$\\
+	
+	We remember that we defined $T(t) =  \frac{c'(t)}{||c'(t)}$. If we replace $T(t)$ we get: \\
+	
+	$\int_{a}^{b}F\cdot T ds = \int_{a}^{b} F(c(t))\cdot\frac{c'(t)}{||c(t)||}\cdot ||c'(t)|| dt \\= \int_{a}^{b} = F(c(t))\cdot c'(t) dt = \int_{C}^{}F ds$.\\
+	(because we usually write $T ds$ as ds.)
+	
+	
 	\end{itemize}
 	
 	
