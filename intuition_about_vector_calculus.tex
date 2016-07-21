@@ -12,7 +12,7 @@
 \begin{document}
 	\maketitle
 	\tableofcontents
-	\let\thefootnote\relax\footnote{The content is mainly a summary of different websites(mainly http://mathinsight.org/). Sometimes sentences are cited one-to-one, but I have refrained from making citations and a bibliography because this paper's goal is not to be published but for private use.}
+	\let\thefootnote\relax\footnote{The content is mainly a summary of different websites(mainly http://mathinsight.org/). Sometimes sentences are cited one-to-one, but I have refrained from making citations and a bibliography because this paper's goal is not to be published but to use privately.}
 	\newpage
 	\section{Line Integral of scalar-valued functions}
 	
@@ -47,7 +47,7 @@
 	
 	\begin{itemize}
 	\item The only change to the chapter above is that now we want to integrate a vector valued curve function along a curve. They are usually represented by a vector field.\\	\includegraphics[width=0.8\textwidth, height = 200px]{Field_Helix.png}
-	\\ $\textit{A very easy interpretation is to imagine the amount of work that a foce field does on a particle as it moves along a curve.}$
+	\\ $\textit{A very easy interpretation is to imagine the amount of work that a}$\\ $\textit{force field does on a particle as it moves along a curve.}$
 	
 	\item Imagine you have a Bead that is fixed to move along a helix defined as $c(t)$. The green rectangle is a magnet inducing a magnetic field $F(x,y,z)$(illustrated by the green arrows). The line integral of a vector field can be thought of, as work on the bead. 
 	
@@ -73,10 +73,24 @@
 	
 	$\int_{a}^{b}F\cdot T ds = \int_{a}^{b} F(c(t))\cdot\frac{c'(t)}{||c(t)||}\cdot ||c'(t)|| dt \\= \int_{a}^{b} = F(c(t))\cdot c'(t) dt = \int_{C}^{}F ds$.\\
 	(because we usually write $T ds$ as ds.)
+	\end{itemize}
+	\newpage
+	
+	\section{Line integrals as circulation}
+	\begin{itemize}
+	
+	\item In the previous chapter we learned how a vector field F over an oriented curve C "adds up" the component of the vector field that is tangential to the curve. In simple words, this defines how much the vector field is aligned with the curve. But what do we do if the curve is closed?
+	
+	\item The line inegral then indicates how much the vector fields tends to circulate around the curve C.\\
+	$\int_{C}^{}F\cdot ds$ = $\oint_{C}^{}F\cdot ds$ (other notation) = circulation of F around C 
+	\enlargethispage{\baselineskip}
+	\item The circulation can be positive or negative according to the "circling"-direction of the vector field around the curve C. It is positive if it circles with the Curve and negative if it circles in counter-clockwise of the Curve.\\  $\newline$
+	\includegraphics[width=0.8\textwidth, height = 200px]{circulation.png}
+	
+	$\textit{In this example the circulation of the vector field circulates clockwise in}$\\ $\textit{the opposite direction of the Curve.}$
 	
 	
 	\end{itemize}
-	
 	
 
 \end{document}
