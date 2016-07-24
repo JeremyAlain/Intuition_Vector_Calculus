@@ -53,7 +53,7 @@
 	
 	\newpage
 	
-	\section{Divergence incl. Divergence Theorem}
+	\section{Divergence}
 	
 		\begin{itemize}
 			\item Divergence is nothing else than "flux density" meaning the net flux per unit volume. It tells you how much flux is entering or leaving a specific point. You can also think about it as flux expansion(positive divergence) or flux contraction(negative divergence).
@@ -65,18 +65,12 @@
 			So if you imagine that you had a tiny little cube(in the space $R^3$) you'd have to calculate the flux change in all directions to get divergence: \\ \\
 			\textit{Total flux change = (field change in X direction) + (field change in Y direction) + (field change in Z direction)} \\
 			$ \leftrightarrow Divergence = \lim\limits_{Vol \rightarrow 0} \frac{Flux}{Vol}$ \\
-			$\leftrightarrow Divergence = \bigtriangledown (gradient) =  \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}$\\
+			$\leftrightarrow Divergence = \bigtriangledown (Gradient) =  \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}$\\
 			
 			\includegraphics[width=0.7\textwidth, height = 200px]{divergence.png}\\
 			\textit{Divergent vector field with embedded sphere in three-dimensional space. The vector field is expanding thus the divergence is positive.}
 			
-			\begin{figure}
-
-\end{figure}
-
 		\end{itemize}
-	
-	
 	
 	\newpage
 	\section{Line Integral of scalar-valued functions}
@@ -152,10 +146,36 @@
 	\item The circulation can be positive or negative according to the "circling"-direction of the vector field around the curve C. It is positive if it circles with the Curve and negative if it circles counter-clockwise to the Curve.\\  $\newline$
 	\includegraphics[width=0.8\textwidth, height = 200px]{circulation.png}
 	
-	$\textit{In this example the circulation of the vector field circulates clockwise in}$\\ $\textit{the opposite direction of the Curve.}$
+	$\textit{In this example the circulation of the vector field circulates clockwise in}$\\ $\textit{the opposite direction of the Curve.}$ 
+	\item You can also imagine the cirulation by measuring the total "push" you get when going along a path such as a circle. Or if you had a paper boat in a whirlpool, the circulation would be the amount of force that pushed it along as it went in a circle. 
+	\end{itemize}
+	
 	\newpage
 	
 	\section{The curl (Microscopic)}
+	\begin{itemize}
+		
+		\item The curl is simply the circulation per unit are, circulation density, or rate of rotation at a signe point. Imagine you would shrink the whirlpool(from the Circulation chapter) to a tiny size but keeping the force the same. You will have a a lot of power in a small spot $\rightarrow$ large curl. If you'd widen the whirlpool and keep the force the same you will have the force distributed over a larger area. $\rightarrow$ small curl. 
+		
+		\item Imagine that before you had a small ball circling around a curve, driven by a vector field. Now the small ball is at a spot where there is no circulation around the vector field. But because the vector field still exerts force on the ball, it will circly on the spot. 
+		
+		\includegraphics[width=0.6\textwidth, height = 200px]{curl.png}\\
+		\textit{The green arrow is the curl of the vector field. For explaination see below.}
+		
+		\item Suppose we have a current of water and we want to determine if there is a curl or not(so is there microscopically any twisting or pushing force?). To test that we put a paddle wheel into the water and notice if it turns. 
+		
+		\includegraphics[width=0.7\textwidth, height = 200px]{paddle_wheel.png}\\
+		\textit{If the paddle does turn the vector field has a curl ath that point. If it doesn't turn then there isn't a curl.}
+		
+		\item more on one side, 
+		uneven
+		not conservative/ what is conservative? has zero curl 
+		go with curl saves energy 
+		Curl is a vector(magnitude and direction) what if you put it sideways? coudln't you put it upside down?
+		-->right hand rule counter clock wise
+
+		 
+	\end{itemize}
 	
 	\newpage
 	
@@ -171,7 +191,7 @@
 	
 	\newpage
 	
-	\section{Gauss Theorem}
+	\section{Gauss Theorem(Divergence Theorem)}
 	
 	
 	
@@ -179,7 +199,7 @@
 	
 	
 	
-	\end{itemize}
+
 	
 
 \end{document}
