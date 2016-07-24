@@ -12,7 +12,72 @@
 \begin{document}
 	\maketitle
 	\tableofcontents
-	\let\thefootnote\relax\footnote{The content is mainly a summary of different websites(mainly http://mathinsight.org/). Sometimes sentences are cited one-to-one, but I have refrained from making citations and a bibliography because this paper's goal is not to be published but to use privately.}
+	\let\thefootnote\relax\footnote{The content is mainly a summary of different websites(mainly http://mathinsight.org/ and http://betterexplained.com). Sometimes sentences are cited one-to-one, but I have refrained from making citations and a bibliography because this paper's goal is not to be published but to use privately.}
+	\newpage
+	
+	\section{Flux}
+		\begin{itemize}
+		\item Flux is the amount of "something"(a force, an electric field, potatoes...) passing through a surface. 
+		\item The \textbf{total flux} depends on:
+			\begin{itemize}	
+				\item \textbf{Strength of the field}: The source of the flux has a huge impact on the total flux. Doubling it's strenght will double the amount of potatoes you shoot through your surface.
+				\item \textbf{Size of the surface it passes through}: The bigger the surface, the more fits through.
+				\item \textbf{Their orientation}: When the surface faces the source(they are orthogonal), all of the potatoes can pass the surface. As the surface titls away from the field, less potatoes can enter the surface an the flux decreases. 
+			\end{itemize}
+		
+		\item \textbf{Vector Field}: This is the source of the flux that exerts some force on the surface. 
+		
+		\item \textbf{Surface}: This is the boundary the flus passes through. It can be a sphere, a plane or the top of a bucket. Notice that the top of a bucket is empty, but that we can measure the flux passing through this empty region.
+		
+		\item \textbf{Timing}: We measure the flux at a specific time. Because the flux can change, we have to freeze time and look at it at this moment. 
+		
+		\item We say that we have \textit{positive flux} when it leaves the closed surface and \textit{negative flux} when it enters a closed surface.
+		
+		\item Now let's get to the math and derive a formula. We want to know how much of a vector field is passing through our surface, taking the magnitude, orientation, and size into account. \\ \\
+		\textit{Total flux = Field Strength $\cdot$ Surface Size $\cdot$ Orientation}\\ \\
+		Because the vector field is not the same everywhere we will look at tiny little surface pieces a time and add them up.\\ \\
+		\textit{Total flux = (Field Strength $\cdot$ dS $\cdot$ Orientation) for every dS) = \\ Integral(Field Strength $\cdot$ Orientation $\cdot$ dS)} \\  \\
+		
+		\includegraphics[width=0.8\textwidth, height = 150px]{flux.png}\\
+		\textit{We see that the flux is parallel with the top of the surface. But the left surface gets maximal flux as it is directed orthogonal to it.}
+
+		\item Mathematically we denote a surface with its normal vector which sticks out of the surface orthogonally. This means the normal vector of the left surface is parallel to the flux.
+		\item As we are trying to measure how much the strenght of the vector field passes through the surface at different angles, you could rephrase it as how does the angle between the source and the surface affect the strenght of the flux on the surface. How could we mathematically denote that?\\
+		Well that's easy, we use the dot product. It gives us a number between 0 and 1 that tells us what percentage of the field is passing through the surface.
+		\item If we take together both aspects we get following new formula.
+		Total flux = Integral(Vector Field Strength dot normal Vector)dS \\
+		$= \int_{S}^{} \overrightarrow{F} \cdot \overrightarrow{n} dS$
+		
+		
+		\end{itemize}
+	
+	\newpage
+	
+	\section{Divergence incl. Divergence Theorem}
+	
+		\begin{itemize}
+			\item Divergence is nothing else than "flux density" meaning the net flux per unit volume. It tells you how much flux is entering or leaving a specific point. You can also think about it as flux expansion(positive divergence) or flux contraction(negative divergence).
+			
+			\item Imagine you could talk to a specific point. If he saw flux entering he would tell you that ther is negative divergence. If he saw flux leaving he would say there is positive divergence. Also the bigger the flux densitivy(positive or negative), the stronger the flux source or sink. If the divergence is zero, it menas that there is no net flux change. 
+			
+			\item Mathematically speaking: \\
+			\textit{Divergence}$ = \frac{Flux}{Volume}$ \\ \\ 
+			So if you imagine that you had a tiny little cube(in the space $R^3$) you'd have to calculate the flux change in all directions to get divergence: \\ \\
+			\textit{Total flux change = (field change in X direction) + (field change in Y direction) + (field change in Z direction)} \\
+			$ \leftrightarrow Divergence = \lim\limits_{Vol \rightarrow 0} \frac{Flux}{Vol}$ \\
+			$\leftrightarrow Divergence = \bigtriangledown (gradient) =  \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}$\\
+			
+			\includegraphics[width=0.7\textwidth, height = 200px]{divergence.png}\\
+			\textit{Divergent vector field with embedded sphere in three-dimensional space. The vector field is expanding thus the divergence is positive.}
+			
+			\begin{figure}
+
+\end{figure}
+
+		\end{itemize}
+	
+	
+	
 	\newpage
 	\section{Line Integral of scalar-valued functions}
 	
@@ -84,21 +149,13 @@
 	\item The line inegral then indicates how much the vector fields tends to circulate around the curve C.\\
 	$\int_{C}^{}F\cdot ds$ = $\oint_{C}^{}F\cdot ds$ (other notation) = circulation of F around C 
 	\enlargethispage{\baselineskip}
-	\item The circulation can be positive or negative according to the "circling"-direction of the vector field around the curve C. It is positive if it circles with the Curve and negative if it circles in counter-clockwise of the Curve.\\  $\newline$
+	\item The circulation can be positive or negative according to the "circling"-direction of the vector field around the curve C. It is positive if it circles with the Curve and negative if it circles counter-clockwise to the Curve.\\  $\newline$
 	\includegraphics[width=0.8\textwidth, height = 200px]{circulation.png}
 	
 	$\textit{In this example the circulation of the vector field circulates clockwise in}$\\ $\textit{the opposite direction of the Curve.}$
 	\newpage
 	
 	\section{The curl (Microscopic)}
-	
-	\newpage
-	
-	\section{Flux}
-	
-	\newpage
-	
-	\section{Divergence inkl. Divergenz Theorem}
 	
 	\newpage
 	
