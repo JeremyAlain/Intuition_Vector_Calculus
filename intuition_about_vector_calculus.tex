@@ -143,8 +143,11 @@
 	\item The line inegral then indicates how much the vector fields tends to circulate around the curve C.\\
 	$\int_{C}^{}F\cdot ds$ = $\oint_{C}^{}F\cdot ds$ (other notation) = circulation of F around C 
 	\enlargethispage{\baselineskip}
-	\item The circulation can be positive or negative according to the "circling"-direction of the vector field around the curve C. It is positive if it circles with the Curve and negative if it circles counter-clockwise to the Curve.\\  $\newline$
-	\includegraphics[width=0.8\textwidth, height = 200px]{circulation.png}
+	\item The circulation can be positive or negative according to the "circling"-direction of the vector field around the curve C. It is positive if it circles with the Curve and negative if it circles counter-clockwise to the Curve.
+	\item You can also imagine this formula in a more intuitive way. Circulation is the integral of a vector field along a path. This means you add up how much the field pushes you along a path. 
+	If you have a function $F(t)$ that defines the poisition you can take the time derivateive to ge the velocity at that poistion. Why do you want the velocity vector? Because you do not want to know where you are but where you are going and how much the vector field pushes you in this direction(in a river are you going upstream or downstrem?). So if F(s) is the position, dS is the velocity. We get the same formula as above:\\
+	Total pushing force = Circulation = $\int F(r) \cdot dr.$	\\ $\newline$
+	\includegraphics[width=0.8\textwidth, height = 200px]{circulation.png}	
 	
 	$\textit{In this example the circulation of the vector field circulates clockwise in}$\\ $\textit{the opposite direction of the Curve.}$ 
 	\item You can also imagine the cirulation by measuring the total "push" you get when going along a path such as a circle. Or if you had a paper boat in a whirlpool, the circulation would be the amount of force that pushed it along as it went in a circle. 
@@ -165,15 +168,16 @@
 		\item Suppose we have a current of water and we want to determine if there is a curl or not(so is there microscopically any twisting or pushing force?). To test that we put a paddle wheel into the water and notice if it turns. 
 		
 		\includegraphics[width=0.7\textwidth, height = 200px]{paddle_wheel.png}\\
-		\textit{If the paddle does turn the vector field has a curl ath that point. If it doesn't turn then there isn't a curl.}
+		\textit{If the paddle does turn the vector field has a curl at
+		 that point. If it doesn't turn then there isn't a curl.}
 		
-		\item more on one side, 
-		uneven
-		not conservative/ what is conservative? has zero curl 
-		go with curl saves energy 
-		Curl is a vector(magnitude and direction) what if you put it sideways? coudln't you put it upside down?
-		-->right hand rule counter clock wise
-
+		\item The paddle wheel will start to turn if there is more force on one side than on the other. Thus if the vector field is uneven or assymetric, at that specific point, there exists a curl. 
+		\item Because there is this uneven, unexpected twisting enforced by the vector field we call this field \textbf{not conservative}. A \textbf{conservative} field would be a field with zero curl. It also has the property that its line integral is path independent, meaning that choosing any two points for the line integral won't change the result. A conervative field is also said to be fair. If you'd float down a river, you could get a free ride down but then you would have to put in work to get up the stream again. In a non-conservative field you can really get a free ride by going with the "random" current of the water. 
+		\item The curl is not a scalar like the divergence, but a vector. This means that it has a magnitude and a direction. The magnitude is simply the force of the twist. The direction is defined as the axis, around which the paddle wheel turns. So if you think about it, there could be two directions(if you turned the paddle wheel upside down). The curl's direction is defined to rotate counterclockwise, which gives you then its direction(you can test that with the right hand rule).
+		
+		\item Mathematically speaking we can define the curl as circulation per area with its vector pointing out of the page(if the curl is counterclockwise). We obtain following formula:\\
+		Curl = $\frac{circulation}{area} = \frac{\int F(r \cdot dr)}{\int S}$
+		
 		 
 	\end{itemize}
 	
