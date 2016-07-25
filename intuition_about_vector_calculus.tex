@@ -160,7 +160,7 @@
 		
 		\item The curl is simply the circulation per unit are, circulation density, or rate of rotation at a signe point. Imagine you would shrink the whirlpool(from the Circulation chapter) to a tiny size but keeping the force the same. You will have a a lot of power in a small spot $\rightarrow$ large curl. If you'd widen the whirlpool and keep the force the same you will have the force distributed over a larger area. $\rightarrow$ small curl. 
 		
-		\item Imagine that before you had a small ball circling around a curve, driven by a vector field. Now the small ball is at a spot where there is no circulation around the vector field. But because the vector field still exerts force on the ball, it will circly on the spot. 
+		\item Imagine that in the chapter above you had a small ball circling around a curve, driven by a vector field. Now the small ball is at a spot where there is no circulation around the vector field. But because the vector field still exerts force on the ball, it will circly on the spot. 
 		
 		\includegraphics[width=0.6\textwidth, height = 200px]{curl.png}\\
 		\textit{The green arrow is the curl of the vector field. For explaination see below.}
@@ -177,6 +177,49 @@
 		
 		\item Mathematically speaking we can define the curl as circulation per area with its vector pointing out of the page(if the curl is counterclockwise). We obtain following formula:\\
 		Curl = $\frac{circulation}{area} = \frac{\int F(r \cdot dr)}{\int S}$
+		
+		\subsection{Components of the curl(another approach)}
+		
+		\item We go back to the first situation described above, where the ball is in the middle of a fluid with a flow given by F. It experiences a curl but no circulation. Using the right hand rule we can denote the vector curl F and the magnitude is defined as $||curl F ||$.
+		
+		\item We find ourself in three dimensional space. This means that the curl F has an x, y and z component. If we let v = curl F, then we could write curl F in terms of components as:\\
+		$curl F = v = V_1i + v_2j + v_3$
+		
+		\item \textbf{Z-component of curl}\\
+		Here we fixate the z-axis on a rod and thus allow the ball only to rotate around z-axis(so its only influenced by the x and y component of F). This rotation corresponds to $v_3k$, where $v_3$ is the component of the curl in the z direction. The speed of the rotation $ = |v_3|.$ 
+		\includegraphics[width=0.6\textwidth, height = 200px]{z-component.png}\\
+		\textit{The ball is rotating in a counterclockwise direction. Using the right hand rule we see that the curl is positive}\\
+		
+		The curl is not parallel to the z-axis, this implies that the magnitude of the z-component v3 is smaller than the magnitude of curl F(the ball rotates slower than it did when it was allowed to rotate freely). \\
+		What properties of vector field F will cause the sphere to spin even now that it cannot move freely? The rotation is solely dependent on the x-component $F_1$ and the y-component $F_2$. \\
+		\includegraphics[width=0.6\textwidth, height = 200px]{xy-plane.png}\\
+		\textit{This image illustrates the xy-plane with the z-axis coming right out of the paper.}\\
+		
+		You can easily imagine what you need to do to create a counterclockwise rotation.The vector field component $F_1$(bottom) needs to have a stronger push than $F_1$(top). Similarly $F_2$(right) needs to have a stronger push than $F_2$(left). The curl is supposed to correspond to "microscopic circulation," so we view the sphere as being very small. The increase of $F_2$ as we move a tiny bit to the right(and similarly the \textbf{decrease} of $F_1$ as we move to the top)  is captured by the partial derivative of $F_2$ with respe cto to x(of $F_1$ in respect to y). It turns out that the effects of these changes in F simply add up. We can catch that in the following formulas.\\
+		\begin{center}
+		$v_3 =$ curl$F \cdot k = \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}$
+		\end{center}
+		\footnote{If you wonder why it's a substraction and not an addition think again. We said that $F_1$ has to be stronger in the bottom. Since this corresponds to $F_1$ decreasing as y increases, we need a negative $\frac{\partial F_1}{\partial y}$}.
+		\newpage
+		\item If you replay that game and keep the righthand-rule, but rename the axis(in the same order but with the new fixated axis pointing out of the paper), you can get the formulas for the fixated y-axis and x-axis. \\
+		
+		\begin{center}
+			y-axis: $v_2$ = curl $F \cdot j = \frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}$\\ $\newline$
+			x-axis: $v_3$ = curl $F \cdot i = \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}$\\ $\newline$
+			
+			$ \leftrightarrow$ curl F = ($\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}$,$\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}$,$\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}$)
+		\end{center}
+		
+		\newpage
+		
+		
+		
+		
+		
+		
+		
+
+
 		
 		 
 	\end{itemize}
