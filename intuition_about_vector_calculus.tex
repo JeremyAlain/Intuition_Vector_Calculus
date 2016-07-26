@@ -235,7 +235,22 @@
 		
 		\item The important precondition for this theorem to hold, is that the vector Field F is "constant" over the whole curve C, so that we actually can evaluate the integral at two endpoints. This means that we require the vector field to be conservative. If $F$ is path-dependent, it will be impossible to reduce its line integral to values of a function at the path endpoints. 
 		
-		\ 
+		\item We parametrize the curve C from points P to Q with the function $c(t)$ for $a < t < b$. So $P = c(a), Q = c(b)$. \\
+		Remember from the chapter about "Scalar valued Line integrals" that we can denote $\int_{C}^{} F\cdot ds = \int_{a}^{b} F(c(t))\cdot c'(t) dt$
+		
+		\item In the first paragraph of this chapter we declared that\\
+		\begin{center}
+			$\int_{C}^{}F \cdot ds = f(Q) - f(P)$
+		\end{center}
+		So if we combine this formula with the one derived in the last paragraph we get:\\
+		\begin{center}
+			$\int_{C}^{}F \cdot ds = \int_{a}^{b} F(c(t)) \cdot c'(t)dt = f(c(b)) - f(c(a))$
+		\end{center} 
+		
+		\item It's beginning to look like the formula of the one-variable calculus fundamental theorem. Now let $G(t)$ be defined as $f(c(t))$. We can calculate the derivative using the chain rule:\\
+		\begin{center}
+			$G'(t) = Df(c(t))\cdot Dc(t) = \bigtriangledown f(c(t))\cdot c'(t)$
+		\end{center}
 		
 	\end{itemize}
 	
