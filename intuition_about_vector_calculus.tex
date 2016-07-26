@@ -210,23 +210,34 @@
 			$ \leftrightarrow$ curl F = ($\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}$,$\frac{\partial F_1}{\partial z} - \frac{\partial F_3}{\partial x}$,$\frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z}$)
 		\end{center}
 		
-		\newpage
-		
-		
-		
-		
-		
-		
-		
-
-
-		
-		 
+	\newpage
+	
 	\end{itemize}
 	
 	\newpage
 	
-	\section{Gradient Theorem}
+	\section{Gradient Theorem (Fundamental Theorem for line integrals)}
+	
+	\begin{itemize}
+		\item Remember the fundamental theorem of one-variable calculus to evaluate integrals. Assume you have a function $g(t)$ and it is the derivative of the function $G'(t)$:\\
+		\begin{center}
+			$g(t = G'(t)$)
+		\end{center}
+		Then the integral of $g$ is just the difference in the values of $G(t)$ at the endpoints b and a:\\
+		\begin{center}
+			$\int_{a}^{b} G'(t) dt =\int_{a}^{b} g(t) = G(b) - G(a)$
+		\end{center}
+		There is a similar theorem that holds for line integrals of vector fields. It tells you that you can evaluate the line integral of a vector Field \textbf{F} along a curve $C$ in the values of another function f evaluated at the endpoints of C:\\
+		\begin{center}
+			$\int_{C}^{}F \cdot ds = f(Q) - f(P)$
+		\end{center}
+		where C starts at point P and ends at point Q. 
+		
+		\item The important precondition for this theorem to hold, is that the vector Field F is "constant" over the whole curve C, so that we actually can evaluate the integral at two endpoints. This means that we require the vector field to be conservative. If $F$ is path-dependent, it will be impossible to reduce its line integral to values of a function at the path endpoints. 
+		
+		\ 
+		
+	\end{itemize}
 	
 	\newpage
 	
