@@ -221,7 +221,7 @@
 	\begin{itemize}
 		\item Remember the fundamental theorem of one-variable calculus to evaluate integrals. Assume you have a function $g(t)$ and it is the derivative of the function $G'(t)$:\\
 		\begin{center}
-			$g(t = G'(t)$)
+			$g(t) = G'(t)$
 		\end{center}
 		Then the integral of $g$ is just the difference in the values of $G(t)$ at the endpoints b and a:\\
 		\begin{center}
@@ -242,14 +242,53 @@
 		\begin{center}
 			$\int_{C}^{}F \cdot ds = f(Q) - f(P)$
 		\end{center}
-		So if we combine this formula with the one derived in the last paragraph we get:\\
+		So if we combine this formula with the one derived in the last paragraph we get following equation:\\
 		\begin{center}
 			$\int_{C}^{}F \cdot ds = \int_{a}^{b} F(c(t)) \cdot c'(t)dt = f(c(b)) - f(c(a))$
-		\end{center} 
+		\end{center}
+		Remember that $P = c(a), Q = c(b)$. Note that there is not a actual derivation from the second term to the third term. But To use our c(t) to parametrize our curve we need to rewrite the first term as the second term.
 		
-		\item It's beginning to look like the formula of the one-variable calculus fundamental theorem. Now let $G(t)$ be defined as $f(c(t))$. We can calculate the derivative using the chain rule:\\
+		\item It's beginning to look like the formula of the one-variable calculus fundamental theorem. Now let $G(t)$ be defined as $f(c(t))$. Then the righthandside of the last equation truly is: 
+		\begin{center}
+			$G(b)-G(a)$
+		\end{center}So this property is fulfilled. We now only need to proove that: 
+		\begin{center}
+			$F(c(t)) \cdot c'(t) = G'(t)$
+		\end{center}
+		We can calculate the derivative using the chain rule:\\
 		\begin{center}
 			$G'(t) = Df(c(t))\cdot Dc(t) = \bigtriangledown f(c(t))\cdot c'(t)$
+		\end{center}
+		This might raise a few questions. 
+		 \begin{itemize}
+				\item Note that our parameter function $c(t)$ takes a one-dimensional number t and calculates $c(t)$ which lies in $R^n$. The integral of our Vector field f(x) takes a value x in $R^n$ and calculates $f(x)$ in R. So our chain has following properties: \\
+		$c: R \rightarrow R^n$ and $f: R^n \rightarrow R$. 
+			\item Now this fact logically leads us to the conclusion that we have to take the gradient of $f(c(t))$. The function can take multiple inputs because $c(t)$ is a vector in $R^n$. S we want to know its rate of increase in all directions. 
+			\item For $c'(t)$ we have only 1 input and can use the normal derivative of a parametrized curve, the tangent vector $c'(t)$. 
+		\end{itemize}
+		
+		\item Assume that we find a function $f$ so that  \begin{center} $\bigtriangledown f(c(t)) = $\textbf{F}.
+		\end{center}
+		In this case the following equation holds: 
+		\begin{center}
+			$G'(t) = \bigtriangledown f(c(t)) \cdot c'(t) = $\textbf{F}$ \cdot c'(t) = \textbf{F}(c(t))\cdot c'(t)$
+		\end{center}
+		
+		So we prooved that
+		\begin{center}
+			$G'(t) = \textbf{F}(c(t))\cdot c'(t)$
+		\end{center}
+		and we know with the fundamental theorem of one-dimensional calculus that
+		\begin{center}
+			$\int_{a}^{b} G'(t) = G(b)-B(a)$
+		\end{center}
+		If we take together both equations we prooved that:
+		\begin{center}
+			$\int_{a}^{b} \bigtriangledown f(c(t))\cdot c'(t)dt = \int_{a}^{b} \textbf{F}c(t) \cdot c'(t) = f(c(b)) - f(c(a))$
+		\end{center}
+		Rewriting it:
+		\begin{center}
+			$\int_{C}^{}\bigtriangledown f\cdot ds = f(Q)-F(P)$
 		\end{center}
 		
 	\end{itemize}
