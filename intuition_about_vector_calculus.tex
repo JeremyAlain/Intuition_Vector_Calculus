@@ -246,7 +246,7 @@
 		\begin{center}
 			$\int_{C}^{}F \cdot ds = \int_{a}^{b} F(c(t)) \cdot c'(t)dt = f(c(b)) - f(c(a))$
 		\end{center}
-		Remember that $P = c(a), Q = c(b)$. Note that there is not a actual derivation from the second term to the third term. But To use our c(t) to parametrize our curve we need to rewrite the first term as the second term.
+		Remember that $P = c(a), Q = c(b)$. Note that there is not a actual derivation from the second term to the third term. But to use our c(t) to parametrize our curve we need to rewrite the first term as the second term.
 		
 		\item It's beginning to look like the formula of the one-variable calculus fundamental theorem. Now let $G(t)$ be defined as $f(c(t))$. Then the righthandside of the last equation truly is: 
 		\begin{center}
@@ -254,6 +254,10 @@
 		\end{center}So this property is fulfilled. We now only need to proove that: 
 		\begin{center}
 			$F(c(t)) \cdot c'(t) = G'(t)$
+		\end{center}
+		Because we noted in the beginning that the fundamental theorem of one-variable calculus to evaluate integrals is defined as:
+		\begin{center}
+			$\int_{a}^{b} G'(t) dt =\int_{a}^{b} g(t) = G(b) - G(a)$
 		\end{center}
 		We can calculate the derivative using the chain rule:\\
 		\begin{center}
@@ -284,7 +288,8 @@
 		\end{center}
 		If we take together both equations we prooved that:
 		\begin{center}
-			$\int_{a}^{b} \bigtriangledown f(c(t))\cdot c'(t)dt = \int_{a}^{b} \textbf{F}c(t) \cdot c'(t) = f(c(b)) - f(c(a))$
+			$G'(t) = \textbf{F}(c(t))$ \\
+			$\rightarrow \int_{a}^{b} G'(t) = \int_{a}^{b} \bigtriangledown f(c(t))\cdot c'(t)dt$ \\$ = \int_{a}^{b} \textbf{F}(c(t)) \cdot c'(t) = f(c(b)) - f(c(a))$
 		\end{center}
 		Rewriting it:
 		\begin{center}
